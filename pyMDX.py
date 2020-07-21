@@ -1,4 +1,6 @@
-import clr
+# Librairies
+
+import clr # > pip install pythonnet
 from pathlib import Path
 
 root = Path(r'C:\Windows\Microsoft.NET\assembly\GAC_MSIL')
