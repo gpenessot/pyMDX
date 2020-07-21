@@ -1,9 +1,9 @@
 import clr
 from pathlib import Path
 
-root = Path(r"C:\Windows\Microsoft.NET\assembly\GAC_MSIL")
-adomd_path = str(max((root / "Microsoft.AnalysisServices.AdomdClient").iterdir())
-                           / "Microsoft.AnalysisServices.AdomdClient.dll")
+root = Path(r'C:\Windows\Microsoft.NET\assembly\GAC_MSIL')
+adomd_path = str(max((root / 'Microsoft.AnalysisServices.AdomdClient').iterdir())
+                           / 'Microsoft.AnalysisServices.AdomdClient.dll')
 
 clr.AddReference("System")
 clr.AddReference("System.Data")
