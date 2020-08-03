@@ -29,3 +29,21 @@ def ExtractionDonnees(mdx_query, conn_string):
     dataadapter.Fill(table)
     
     return table
+
+def NettoyageNomsCol(df) :
+    """
+    Cette fonction nettoie le nom des dimensions issues du cube.
+    L'argument est le nom du dataframe.
+    
+    Exemple :
+    > df.columns
+    > Index(['[Informations - Compte].[SIREN - Compte].[SIREN - Compte].[MEMBER_CAPTION]',
+      dtype='object')
+    > NettoyageNomsCol(df)
+    > df.columns
+    > Index('SIREN - Compte',
+    dtype='object')
+    """
+    df.columns = [x.split('.')[1].strip('[]') for x in df.columns]
+    
+    return df
